@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="left">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <FrameLayout
+                android:id="@+id/frame_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:id="@+id/menu_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_65dp"
+                android:src="@drawable/menu"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@drawable/drawer_background">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <include
+                    android:id="@+id/header_layout1"
+                    layout="@layout/drawer_header"/>
+
+                <TextView
+                    android:id="@+id/nav_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_43dp"
+                    android:layout_marginTop="@dimen/dimen_37dp"
+                    android:drawableLeft="@drawable/home"
+                    android:text="@string/home"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/mont_serrat_regular"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:drawablePadding="@dimen/dimen_10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/header_layout1"/>
+
+
+                <TextView
+                    android:id="@+id/nav_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_37dp"
+                    android:drawableLeft="@drawable/profile"
+                    android:text="@string/my_profile"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/mont_serrat_regular"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:drawablePadding="@dimen/dimen_10dp"
+                    app:layout_constraintStart_toStartOf="@id/nav_home"
+                    app:layout_constraintTop_toBottomOf="@id/nav_home"/>
+
+                <TextView
+                    android:id="@+id/nav_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_37dp"
+                    android:drawableLeft="@drawable/profile"
+                    android:text="@string/my_orders"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/mont_serrat_regular"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:drawablePadding="@dimen/dimen_10dp"
+                    app:layout_constraintStart_toStartOf="@id/nav_profile"
+                    app:layout_constraintTop_toBottomOf="@id/nav_profile"/>
+
+                <TextView
+                    android:id="@+id/nav_privacy_policy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_37dp"
+                    android:drawableLeft="@drawable/profile"
+                    android:text="@string/privacy_amp_policy"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/mont_serrat_regular"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:drawablePadding="@dimen/dimen_10dp"
+                    app:layout_constraintStart_toStartOf="@id/nav_order"
+                    app:layout_constraintTop_toBottomOf="@id/nav_order"/>
+
+                <TextView
+                    android:id="@+id/nav_term_condition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_37dp"
+                    android:drawableLeft="@drawable/term_condition"
+                    android:text="@string/term_amp_condition"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/mont_serrat_regular"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:drawablePadding="@dimen/dimen_10dp"
+                    app:layout_constraintStart_toStartOf="@id/nav_privacy_policy"
+                    app:layout_constraintTop_toBottomOf="@id/nav_privacy_policy"/>
+
+                <TextView
+                    android:id="@+id/nav_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_37dp"
+                    android:drawableLeft="@drawable/bell_without_noti"
+                    android:text="@string/notification"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/mont_serrat_regular"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:drawablePadding="@dimen/dimen_10dp"
+                    app:layout_constraintStart_toStartOf="@id/nav_term_condition"
+                    app:layout_constraintTop_toBottomOf="@id/nav_term_condition"/>
+
+                <TextView
+                    android:id="@+id/nav_contact_us"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_37dp"
+                    android:drawableLeft="@drawable/bell_without_noti"
+                    android:text="@string/contact_us"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/mont_serrat_regular"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:drawablePadding="@dimen/dimen_10dp"
+                    app:layout_constraintStart_toStartOf="@id/nav_notification"
+                    app:layout_constraintTop_toBottomOf="@id/nav_notification"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/logout_btn"
+                    android:layout_width="@dimen/dimen_90dp"
+                    android:layout_height="@dimen/dimen_40dp"
+                    android:layout_marginBottom="@dimen/dimen_37dp"
+                    android:background="@drawable/green_round_white_border"
+                    android:fontFamily="@font/mont_serrat_semi_bold"
+                    android:text="@string/logout"
+                    android:textAllCaps="false"
+                    android:layout_marginLeft="@dimen/dimen_5dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_14sp"
+                    app:layout_constraintStart_toStartOf="@id/nav_contact_us"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:layout_editor_absoluteX="37dp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/login_btn"
+                    android:layout_width="@dimen/dimen_90dp"
+                    android:layout_height="@dimen/dimen_40dp"
+                    android:layout_marginBottom="@dimen/dimen_37dp"
+                    android:background="@drawable/blue_gradiant_white_border"
+                    android:fontFamily="@font/mont_serrat_semi_bold"
+                    android:text="@string/login"
+                    android:textAllCaps="false"
+                    android:visibility="gone"
+                    android:layout_marginLeft="@dimen/dimen_5dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_14sp"
+                    app:layout_constraintStart_toStartOf="@id/nav_contact_us"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:layout_editor_absoluteX="37dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.navigation.NavigationView>
+
+
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+</layout>

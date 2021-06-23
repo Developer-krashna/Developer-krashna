@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.HomeActivity">
+
+            <TextView
+                android:id="@+id/category_tv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_110dp"
+                android:layout_marginTop="@dimen/dimen_50dp"
+                android:background="@drawable/home_dradient_red_circle"
+                android:fontFamily="@font/mont_serrat_bold"
+                android:gravity="center|bottom"
+                android:padding="@dimen/dimen_15dp"
+                android:text="@string/category"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_24sp"
+                app:layout_constraintBottom_toBottomOf="@id/home_bg"
+                app:layout_constraintTop_toBottomOf="@id/home_bg" />
+
+            <ImageView
+                android:id="@+id/home_bg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_460dp"
+                android:layout_marginBottom="290dp"
+                android:fitsSystemWindows="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/home_page_bg"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            <TextView
+                android:id="@+id/home_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mont_serrat_regular"
+                android:text="@string/home"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/dimen_65dp"
+                android:textSize="@dimen/dimen_22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/cart_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dimen_14dp"
+                android:src="@drawable/home_cart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/home_txt" />
+
+            <ImageView
+                android:id="@+id/search_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dimen_14dp"
+                android:src="@drawable/icons_search_gray"
+                app:layout_constraintEnd_toStartOf="@id/cart_icon"
+                app:layout_constraintTop_toTopOf="@id/home_txt" />
+
+            <ImageView
+                android:id="@+id/notification_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dimen_14dp"
+                android:padding="@dimen/dimen_5dp"
+                android:src="@drawable/bell_without_noti"
+                app:layout_constraintEnd_toStartOf="@id/search_icon"
+                app:layout_constraintTop_toTopOf="@id/home_txt" />
+
+
+            <TextView
+                android:id="@+id/adress_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_28dp"
+                android:fontFamily="@font/varela_round_regular"
+                android:text="@string/ghaziabad_201014"
+                android:textColor="@color/white"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:textSize="@dimen/dimen_22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/home_txt" />
+
+
+            <TextView
+                android:id="@+id/dicount_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_28dp"
+                android:layout_marginBottom="@dimen/dimen_8dp"
+                android:fontFamily="@font/mont_serrat_regular"
+                android:text="@string/up_to_20_off"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_24sp"
+                app:layout_constraintBottom_toTopOf="@id/food_categoty_tv"
+                app:layout_constraintEnd_toEndOf="@id/food_categoty_tv"
+                app:layout_constraintStart_toStartOf="@id/food_categoty_tv" />
+
+            <TextView
+                android:id="@+id/food_categoty_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_28dp"
+                android:layout_marginBottom="@dimen/dimn_62dp"
+                android:fontFamily="@font/mont_serrat_bold"
+                android:text="@string/italian_food"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_30sp"
+                app:layout_constraintBottom_toBottomOf="@id/home_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/category_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_50dp"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintTop_toBottomOf="@+id/category_tv" />
+
+            <TextView
+                android:id="@+id/popular_item_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mont_serrat_bold"
+                android:gravity="center"
+                android:text="@string/popular_item"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_24sp"
+                app:layout_constraintTop_toBottomOf="@id/category_rv" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dimen_35dp"
+                android:layout_marginBottom="@dimen/dimen_28dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/popular_item_tv" >
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/popular_item_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+            </RelativeLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
+    </ScrollView>
+</layout>

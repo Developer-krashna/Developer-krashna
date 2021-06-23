@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home"
+            android:title="@string/home" />
+
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/profile"
+            android:title="@string/my_profile" />
+
+
+        <item
+            android:id="@+id/nav_order"
+            android:icon="@drawable/profile"
+            android:title="@string/my_orders" />
+
+
+        <item
+            android:id="@+id/nav_privacy_policy"
+            android:icon="@drawable/profile"
+            android:title="@string/privacy_amp_policy" />
+
+
+        <item
+            android:id="@+id/nav_term_condition"
+            android:icon="@drawable/term_condition"
+            android:title="@string/my_profile" />
+
+
+        <item
+            android:id="@+id/nav_notification"
+            android:icon="@drawable/bell_without_noti"
+            android:title="@string/notification" />
+
+
+        <item
+            android:id="@+id/nav_contact_us"
+            android:icon="@drawable/bell_without_noti"
+            android:title="@string/contact_us" />
+    </group>
+</menu>

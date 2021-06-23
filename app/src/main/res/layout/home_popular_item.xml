@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginTop="@dimen/dimen_15dp"
+    android:layout_marginStart="@dimen/dimen_20dp"
+    android:layout_marginEnd="@dimen/dimen_20dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_430dp"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        app:cardCornerRadius="@dimen/dimen_50dp"
+        app:cardElevation="@dimen/dimen_10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/item_image_iv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_300dp"
+                android:background="@color/white"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/popular"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/popular_item_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/popular_item"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_24sp"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:fontFamily="@font/mont_serrat_bold"
+                app:layout_constraintStart_toStartOf="@id/item_image_iv"
+                app:layout_constraintEnd_toEndOf="@id/item_image_iv"
+                app:layout_constraintTop_toBottomOf="@id/item_image_iv"
+                />
+
+            <TextView
+                android:id="@+id/weight_tv"
+                android:layout_width="@dimen/dimen_100dp"
+                android:layout_height="@dimen/dimen_40dp"
+                android:background="@drawable/green_border_box"
+                android:layout_marginRight="@dimen/dimen_15dp"
+                android:text="@string/_500gm"
+                android:fontFamily="@font/mont_serrat_semi_bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_17sp"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/item_image_iv"
+                app:layout_constraintBottom_toBottomOf="@id/item_image_iv"
+                app:layout_constraintEnd_toEndOf="@id/item_image_iv"/>
+
+            <TextView
+                android:id="@+id/price_tv"
+                android:layout_width="@dimen/dimen_100dp"
+                android:layout_height="@dimen/dimen_40dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:background="@drawable/green_border_box"
+                android:fontFamily="@font/mont_serrat_semi_bold"
+                android:gravity="center"
+                android:text="@string/rupees"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginRight="@dimen/dimen_75dp"
+                app:layout_constraintTop_toBottomOf="@id/popular_item_tv"
+                tools:layout_editor_absoluteX="105dp" />
+
+
+            <ImageView
+                android:id="@+id/online_store_iv"
+                android:layout_width="@dimen/dimen_60dp"
+                android:layout_height="@dimen/dimen_35dp"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:background="@drawable/green_circle_btn"
+                android:padding="@dimen/dimen_5dp"
+                android:src="@drawable/online_store"
+                app:layout_constraintStart_toEndOf="@id/price_tv"
+                app:layout_constraintTop_toTopOf="@id/price_tv" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

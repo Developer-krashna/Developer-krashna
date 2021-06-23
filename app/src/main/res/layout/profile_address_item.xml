@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    app:cardElevation="@dimen/dimen_10dp"
+    app:cardCornerRadius="@dimen/dimen_50dp"
+    android:layout_margin="@dimen/dimen_5dp"
+    android:layout_height="@dimen/dimen_215dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/address_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_22dp"
+                android:fontFamily="@font/mont_serrat_bold"
+                android:text="@string/mark_john"
+                android:layout_marginLeft="@dimen/dimen_14dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            
+            <ImageView
+                android:id="@+id/delete_item_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dimen_15dp"
+                android:src="@drawable/profile_delete_address"
+                app:layout_constraintTop_toTopOf="@id/address_name_tv"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/address_ades_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_12dp"
+                android:fontFamily="@font/mont_serrat_semi_bold"
+                android:textColor="@color/black"
+                android:text="@string/home_block_c_272_sector_22_paradise_hotel_ghaziabad_201014"
+                android:textSize="@dimen/dimen_20sp"
+                android:layout_marginRight="@dimen/dimen_5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/address_name_tv"
+                app:layout_constraintTop_toBottomOf="@id/address_name_tv" />
+
+            <TextView
+                android:id="@+id/edit_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/edit"
+                android:textSize="@dimen/dimen_22sp"
+                android:fontFamily="@font/mont_serrat_regular"
+                android:textColor="@color/color_otp_red"
+                android:layout_marginRight="@dimen/dimen_15dp"
+                android:layout_marginBottom="@dimen/dimen_22dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
+</layout>

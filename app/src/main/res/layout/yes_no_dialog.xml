@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_28dp"
+        android:fontFamily="@font/mont_serrat_bold"
+        android:text="@string/edit_your_name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dimen_25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/desc_tv"
+        android:layout_width="@dimen/dimen_238dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_22dp"
+        android:fontFamily="@font/mont_serrat_regular"
+        android:gravity="center"
+        android:textColor="@color/color_grey_choko"
+        android:text="@string/are_you_sure_you_want_to_delete_the_address"
+        android:textSize="@dimen/dimen_18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_tv" />
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dimen_35dp"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/desc_tv"
+        app:layout_constraintStart_toStartOf="@id/desc_tv"
+        app:layout_constraintEnd_toEndOf="@id/desc_tv">
+        
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/no_btn"
+            android:layout_width="@dimen/dimen_80dp"
+            android:layout_height="@dimen/dimen_44dp"
+            android:text="@string/no"
+            android:textAllCaps="false"
+            android:textSize="@dimen/dimen_14sp"
+            android:layout_marginRight="@dimen/dimen_4dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mont_serrat_semi_bold"
+            android:background="@drawable/grey_round_50dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/yes_btn"
+            android:layout_width="@dimen/dimen_80dp"
+            android:layout_height="@dimen/dimen_44dp"
+            android:text="@string/yes"
+            android:layout_marginLeft="@dimen/dimen_4dp"
+            android:textAllCaps="false"
+            android:textSize="@dimen/dimen_14sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mont_serrat_semi_bold"
+            android:background="@drawable/red_round_50dp"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
